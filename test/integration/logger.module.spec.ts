@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 import { Inject, Injectable, Module } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { LogService, RootLogger } from '@tgarif/logger';
@@ -47,13 +48,11 @@ describe('LoggerModule', () => {
 
     it('is usable on sibling feature modules', async () => {
       let logger: MockRootLogger;
-      // eslint-disable-next-line unused-imports/no-unused-vars
       let injectedLogService: MockLogService;
 
       @Injectable()
       class FooService {
         constructor(@Inject(LOGGER) private log: MockLogService) {
-          // eslint-disable-next-line unused-imports/no-unused-vars-ts
           injectedLogService = this.log;
         }
 
@@ -239,14 +238,12 @@ describe('LoggerModule', () => {
     describe('async dynamic module', () => {
       let logger: MockRootLogger;
       let logService: LogService;
-      // eslint-disable-next-line unused-imports/no-unused-vars
       let injectedLogService: MockLogService;
 
       beforeEach(async () => {
         @Injectable()
         class FooService {
           constructor(@Inject(LOGGER) private log: MockLogService) {
-            // eslint-disable-next-line unused-imports/no-unused-vars-ts
             injectedLogService = this.log;
           }
 
@@ -311,14 +308,12 @@ describe('LoggerModule', () => {
 
     describe('async dynamic module with sibling feature module', () => {
       let logger: MockRootLogger;
-      // eslint-disable-next-line unused-imports/no-unused-vars
       let injectedLogService: MockLogService;
 
       it('should throw on init', async () => {
         @Injectable()
         class FooService {
           constructor(@Inject(LOGGER) private log: MockLogService) {
-            // eslint-disable-next-line unused-imports/no-unused-vars-ts
             injectedLogService = this.log;
           }
 
