@@ -55,7 +55,7 @@
     "@nestjs/core": "^8.2.3",
     "@nestjs/platform-express": "^8.2.3",
     "@nestjs/testing": "^8.2.3",
-    "@tgarif/eslint-config": "^0.1.0",
+    "@tgarif/eslint-config": "^0.2.0",
     "@tgarif/logger": "^0.1.2",
     "@tgarif/prettier-config": "^0.1.1",
     "@tgarif/tsconfig": "^0.1.0",
